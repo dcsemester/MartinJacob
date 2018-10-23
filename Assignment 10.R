@@ -6,13 +6,12 @@ library(dplyr)
 #' Commit data
 #' Commit R script
 #' 
-fish_data = read.csv("data/Gaeta_etal_CLC_data.csv")
+fish_data <- read.csv("data/Gaeta_etal_CLC_data.csv")
 
-## Excercise 2- First Solo Commit ##
+## Excercise 2 and 3 ##
 
-# adds column for size category
+#' organizes and filters the fish data
+#' 
 fish_data_cat <- fish_data %>% 
-  mutate(length_cat = ifelse(length > 300, "big", "small"))
-
-
-
+  mutate(length_cat = ifelse(length > 300, "big", "small"))%>% 
+  filter(scalelength > 1)
