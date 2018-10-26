@@ -6,6 +6,7 @@ library(dplyr)
 #' Commit data
 #' Commit R script
 #' 
+#' Excercise 4 rename file
 file.rename(from = "data/Gaeta_etal_CLC_data.csv", to = "data/Gaeta_etal_CLC_data_1.csv")
 fish_data <- read.csv("data/Gaeta_etal_CLC_data1.csv")
 
