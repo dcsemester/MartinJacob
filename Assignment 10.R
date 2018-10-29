@@ -19,11 +19,12 @@ fish_data_cat <- fish_data %>%
   mutate(length_cat = ifelse(length > 300, "big", "small"))%>% 
   filter(scalelength > 1)
 
-<<<<<<< HEAD
+## Excercise 5 ##
 ggplot(fish_data_cat, aes(x = length, y = scalelength, color = lakeid)) +
   geom_point()
-=======
-  scale_hist_by_length <- ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
+
+## Excercise 6 ##
+scale_hist_by_length <- ggplot(fish_data_cat, aes(x = scalelength, fill = length_cat)) +
   geom_histogram(bins = 80)
 
 ggsave("scale_hist_by_length.jpg")
